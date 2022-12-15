@@ -4,15 +4,19 @@ const characters = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O"
 let firstPassEl = document.getElementById("first-pass");
 let secondPassEl = document.getElementById("second-pass")
 function generatePass() {
+    firstPassEl.textContent = " ";
+    secondPassEl.textContent = " ";
+
     for (let i = 0; i < 10; i++) {
-    let random1 = Math.floor(Math.random() * characters.length)
-    firstPassEl.textContent += characters[random1];
+
+        let random1 = Math.floor(Math.random() * characters.length)
+        firstPassEl.textContent += characters[random1];
+        
+        
+        let random2 = Math.floor(Math.random() * characters.length)
+        secondPassEl.textContent += characters[random2];
     
-    
-    let random2 = Math.floor(Math.random() * characters.length)
-    secondPassEl.textContent += characters[random2];
-    
-}
+    }
 
 };
 
